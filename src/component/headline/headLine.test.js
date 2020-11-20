@@ -7,12 +7,12 @@ import '../../setupTest'
 import {checkProps, findByTestAtrr} from "../../../Utils";
 
 const setUp = (props={})=>{
-    const component = shallow(<HeadLine {...props}/>)
+    const component = shallow(<HeadLine {...props}/>) //get component
     return component;
 }
 
 describe('Headline Component', () => {
-    describe('Checking PropTypes', ()=>{
+    describe('Checking PropTypes', ()=>{// check PropTypes
         it('Should not throw a warning',()=>{
             const expectedProps = {
                 header: 'Test Header',
@@ -40,8 +40,8 @@ describe('Headline Component', () => {
             wrapper = setUp(props)
         })
 
-        it('Should render without errors',()=>{
-            const component = findByTestAtrr(wrapper,'HeadlineComponent')
+        it('Should render without errors',()=>{ //test
+            const component = findByTestAtrr(wrapper,'HeadlineComponent') //find element in component
             expect(component.length).toBe(1)
         })
 
