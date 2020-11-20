@@ -6,10 +6,10 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <header>
+                <header data-test={"headerComponent"}>
                     <div className={"wrap"}>
                         <div className={"logo"}>
-                            <img src={logo} alt={"logo"}/>
+                            <img data-test={"logoImg"} src={logo} alt={"logo"}/>
                         </div>
                     </div>
                 </header>
